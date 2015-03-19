@@ -1,0 +1,28 @@
+{
+    "dependencies": [
+        "bower"
+    ],
+    "test": [
+       "jshint",
+       "ngtemplates",
+        "jasmine"
+    ],
+    "package": [
+       "concat",
+        "cssmin"
+    ],
+    "dev": [
+        "clean",
+        "dependencies",
+        "test",
+        "package",
+        "concurrent"
+    ],
+    "default": [
+        "clean",
+        "dependencies",
+        "test",
+        "package",
+        "clean:tmp"
+    ]
+}
