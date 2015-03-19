@@ -1,0 +1,47 @@
+<html ng-app="app">
+<head>
+    <link rel="stylesheet" href="/bower_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="page-header">
+        <h1>Input Validierung, Formattierung, Parsierung</h1>
+    </div>
+    <div class="row">
+
+        <div class="col-md-9" role="main">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Dezimal Input</h1>
+                </div>
+                <form name="dezimalform">
+                    <div class="form-group">
+                        <label for="decimalInput">Dezimal Input</label>
+                        <input type="text"
+                               ng-model="decimalValue"
+                               name="decimalValue"
+                               id="decimalInput"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="normalInput">Normaler Input</label>
+                        <input type="text" ng-model="decimalValue" id="normalInput"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="output">Model Value</label> {{decimalValue}}
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="application/javascript" src="/bower_modules/angular/angular.js"></script>
+<script type="application/javascript" src="/dist/app.js"></script>
+</body>
+</html>
