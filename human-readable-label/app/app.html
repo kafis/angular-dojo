@@ -1,0 +1,34 @@
+<html ng-app="app">
+<head>
+    <link rel="stylesheet" href="/bower_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="page-header">
+        <h1>Human Readable Label</h1>
+    </div>
+    <div class="row">
+
+        <div class="col-md-9" role="main">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Anrede</h1>
+                </div>
+                <input type="text" ng-model="abkuerzung"/><br/>
+
+                <salutation of="abkuerzung"></salutation>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="application/javascript" src="/bower_modules/angular/angular.js"></script>
+<script type="application/javascript" src="/dist/app.js"></script>
+</body>
+</html>
