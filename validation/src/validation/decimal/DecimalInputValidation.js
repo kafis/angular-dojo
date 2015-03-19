@@ -7,7 +7,7 @@
             require: "ngModel", //Gimme The Ctrl of the ngModelDirective
             link: function(scope, element, attrs, ctrl) {
                 var regex = /\d+\.?\d*/g;
-                ctrl.$validators.decimalValue = function(modelValue, viewValue) {
+                ctrl.$validators.decimalValueValidation = function(modelValue, viewValue) {
                     var value = modelValue || viewValue;
                     return regex.test(value);
                 };

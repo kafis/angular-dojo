@@ -1,0 +1,6 @@
+<span ng-show="dezimalform.$error.decimalValueValidation">
+                        Das ist keine Dezimalzahl
+                    </span>
+                    <span ng-hide="dezimalform.$error.decimalValueValidation">
+                        Das ist eine Dezimalzahl
+                    </span>
