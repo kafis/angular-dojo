@@ -13,7 +13,6 @@
     "dev": [
         "clean",
         "dependencies",
-        "test",
         "package",
         "concurrent"
     ],
