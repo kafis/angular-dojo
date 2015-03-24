@@ -1,0 +1,6 @@
+{
+   "directory": "bower_modules",
+   "proxy":"http://proxy.inf.epost-dev.de:8080",
+   "https-proxy":"http://proxy.inf.epost-dev.de:8080",
+   "strict-ssl": false
+}

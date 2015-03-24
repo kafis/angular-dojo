@@ -12,10 +12,10 @@
             template: "<span>{{humanReadable}}</span>",
             link: function(scope, element, attrs) {
                 scope.$watch("salutation", function(value) {
-                    if(value === "mr") {
-                      scope.humanReadable = "Herr";
+                    if ("mr" === value) {
+                        scope.humanReadable = "Herr";
                     }
-                    else if(value === "mrs") {
+                    else if ("mrs" === value) {
                         scope.humanReadable = "Frau";
                     } else {
                         scope.humanReadable = "";
