@@ -1,0 +1,7 @@
+{
+    "target": "dist",
+    "src": "src",
+    "test": "test",
+    "libs": "bower_modules",
+    "tmp": "tmp"
+}

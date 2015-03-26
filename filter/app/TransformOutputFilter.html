@@ -1,0 +1,110 @@
+<html ng-app="transformOutputFilter">
+<head>
+    <link rel="stylesheet" href="/bower_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="page-header">
+        <h1>Transform Output Filter</h1>
+    </div>
+    <div class="row">
+
+        <div class="col-md-9" role="main">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Simple</h1>
+                    <pre ng-non-bindable="">{{model | toUpperCase}}</pre>
+                </div>
+                <input type="text" ng-model="model"/><br/>
+
+                <span>Model: {{model | toUpperCase}}</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="page-header">
+        <h1>Transform Output Filter With parameter</h1>
+    </div>
+    <div class="row">
+
+        <div class="col-md-9" role="main">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Simple</h1>
+                    <pre ng-non-bindable="">{{model | prefix :'prefix' :'suffix'}}</pre>
+                </div>
+                <input type="text" ng-model="model"/><br/>
+
+                <span>Model: {{model | prefix :'prefix' :'suffix'}}</span>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-9" role="main">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">With Parameter</h1>
+                    <pre ng-non-bindable="">{{model | prefix :prefix :suffix}}</pre>
+                </div>
+                Model: <input type="text" ng-model="model"/><br/>
+                Prefix: <input type="text" ng-model="prefix"/><br/>
+                Suffix: <input type="text" ng-model="suffix"/><br/>
+
+                <span>Model: {{model | prefix :prefix :suffix}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-9" role="main" ng-controller="ApplyCtrl">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">With Parameter that is a function</h1>
+                    <pre ng-non-bindable="">{{model | apply :transform}}</pre>
+                </div>
+                Model: <input type="text" ng-model="model"/><br/>
+
+
+                <span>Model: {{model | apply :transform}}</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+        <div class="page-header">
+            <h1>Chaining</h1>
+        </div>
+    <div class="row">
+
+        <div class="col-md-9" role="main">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Chaining</h1>
+                    <pre ng-non-bindable="">{{model | prefix :'prefix' :'suffix' | uppercase}}</pre>
+                </div>
+                <input type="text" ng-model="model"/><br/>
+
+                <span>Model: {{model | prefix :'prefix' :'suffix' | uppercase}}</span>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script type="application/javascript" src="/bower_modules/angular/angular.js"></script>
+<script type="application/javascript" src="/dist/app.js"></script>
+</body>
+</html>
